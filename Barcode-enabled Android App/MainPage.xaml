@@ -21,17 +21,19 @@
                  Text="Find Food" Clicked="FindBtn_Clicked" BackgroundColor="Black"/>
 
             <BoxView HeightRequest="1" BackgroundColor="black" />
-            <Label x:Name="LabelTitle" FontAttributes="Bold"
-                TextColor="Blue" FontSize="20" Text="Brand Name: " />
-            <Label x:Name="LabelProductName" TextColor="Green"
-                Text="Product Name: " />
+            <Label x:Name="LabelProductName" FontAttributes="Bold"
+                TextColor="Blue" FontSize="20" Text="Product Name: " />
+            <Label x:Name="LabelBrandName" TextColor="Green"
+                Text="Brand Name: " />
             <Label x:Name="LabelIngredients" TextColor="Green"
               Text="Ingredients: " />
             <Label x:Name="LabelCategories" TextColor="Green"
               Text="Categories: " />
+            <Label x:Name="LabelAllergens" TextColor="red"
+              Text="Allergens: None" />
             <Image x:Name="ImageCover" HorizontalOptions="Center"
                 Source="image_coming_soon.png" />
-            <BoxView HeightRequest="1" BackgroundColor="LightGray" />
+            <BoxView HeightRequest="1" BackgroundColor="black" />
             <Label x:Name="LabelMessage" Text="" />
             <Label Text="Web API Response"
                 HorizontalOptions="Center" />
