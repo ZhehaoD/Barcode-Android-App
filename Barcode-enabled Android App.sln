@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35919.96 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Barcode-enabled Android App", "Barcode-enabled Android App\Barcode-enabled Android App.csproj", "{99EB084B-B11A-4326-9D77-0602CF65CBB5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{99EB084B-B11A-4326-9D77-0602CF65CBB5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99EB084B-B11A-4326-9D77-0602CF65CBB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99EB084B-B11A-4326-9D77-0602CF65CBB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99EB084B-B11A-4326-9D77-0602CF65CBB5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6286B03C-66DC-4AB9-AAA7-6B30F8E501E4}
+	EndGlobalSection
+EndGlobal
