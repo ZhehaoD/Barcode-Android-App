@@ -1,4 +1,5 @@
-﻿using CommunityToolkit.Maui;
+﻿using Camera.MAUI;
+using CommunityToolkit.Maui;
 using Microsoft.Extensions.Logging;
 
 namespace Barcode_enabled_Android_App
@@ -13,6 +14,7 @@ namespace Barcode_enabled_Android_App
                  // Initialize the .NET MAUI Community Toolkit by 
                  // adding the below line of code
                  .UseMauiCommunityToolkit()
+                 .UseMauiCameraView()
                 .ConfigureFonts(fonts =>
                 {
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");

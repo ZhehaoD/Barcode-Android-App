@@ -1,12 +1,19 @@
 ﻿using System.Diagnostics;
 using System.Text.Json;
+using System.Web;
 using CommunityToolkit.Maui.Alerts;
 using CommunityToolkit.Maui.Core;
 namespace Barcode_enabled_Android_App
 {
-    public partial class MainPage : ContentPage
+    public partial class MainPage : ContentPage,IQueryAttributable
     {
         HttpClient client = new HttpClient();
+        public void ApplyQueryAttributes(IDictionary<string, object> query)
+        {
+           EntryBarcode.Text =
+           HttpUtility.UrlDecode(query["barcode"].ToString());
+            Console.WriteLine(HttpUtility.UrlDecode(query["format"].ToString()));
+        }
         private void Network_test()
         {
             Debug.WriteLine("Network test start");
@@ -26,7 +33,7 @@ namespace Barcode_enabled_Android_App
         public MainPage()
         {
             InitializeComponent();
-
+            Routing.RegisterRoute("barcodescanning", typeof(BarcodeScanning));
             Network_test();
         }
         private async Task Show_Toast(string message)
@@ -131,6 +138,11 @@ namespace Barcode_enabled_Android_App
                "Querying book information error. " + ex.Message;
                 Debug.WriteLine(LabelHttpResponse.Text);
             }
+        }
+
+        private async void ScanBarcodeBtn_Clicked(object sender, EventArgs e)
+        {
+            await Shell.Current.GoToAsync("barcodescanning");
         }
     }
 }

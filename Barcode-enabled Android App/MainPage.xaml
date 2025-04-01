@@ -17,8 +17,13 @@
                 <Entry x:Name="EntryBarcode" Placeholder="Enter BarCode number"
                 FontSize="18" Text="" />
             </HorizontalStackLayout>
-            <Button x:Name="FindBtn" HorizontalOptions="Center"
+            <HorizontalStackLayout HorizontalOptions="Center" Spacing="10">
+                <Button x:Name="FindBtn" HorizontalOptions="Center"
                  Text="Find Food" Clicked="FindBtn_Clicked" BackgroundColor="Black"/>
+
+                <Button x:Name="ScanBarcodeBtn" HorizontalOptions="Center"
+                 Text="Scan Food" Clicked="ScanBarcodeBtn_Clicked" BackgroundColor="Black"/>
+            </HorizontalStackLayout>
 
             <BoxView HeightRequest="1" BackgroundColor="black" />
             <Label x:Name="LabelProductName" FontAttributes="Bold"
