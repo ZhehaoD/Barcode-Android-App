@@ -45,7 +45,7 @@ namespace Barcode_enabled_Android_App
             LabelProductName.Text = "Product Name: ";
             LabelIngredients.Text = "Ingredients: ";
             LabelCategories.Text = "Categories: ";
-            LabelAllergens.Text = "Allergens: None";
+            LabelAllergens.Text = "Allergens: ";
 
             LabelMessage.Text = string.Empty;
             LabelMessage.TextColor = Colors.Black;
@@ -82,11 +82,16 @@ namespace Barcode_enabled_Android_App
                     }
                     if (product.TryGetProperty("categories_hierarchy", out var categories))
                     {
-                        LabelCategories.Text = "Allergens: "+ categories.ToString();
+                        LabelCategories.Text += categories.ToString();
                     }
+
                     if (product.TryGetProperty("allergens", out var allergens))
                     {
                         LabelAllergens.Text += allergens.ToString();
+                    }
+                    if (LabelAllergens.Text == "Allergens: ")
+                    {
+                        LabelAllergens.Text = "Allergens: None";
                     }
                     if (product.TryGetProperty("image_url", out var image))
                     {
